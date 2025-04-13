@@ -1,0 +1,28 @@
+.container {
+    padding: 10px 15px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.Logo {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.Designer {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.OrderList {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.Profile {
+    grid-area: 1 / 5 / 2 / 6;
+}

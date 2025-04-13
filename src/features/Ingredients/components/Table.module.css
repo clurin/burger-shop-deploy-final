@@ -1,0 +1,19 @@
+.container {
+    margin: 50px;
+    width: 100%;
+}
+
+.tab {
+    display: flex;
+}
+
+.ingredients {
+    width: 100%;
+    margin-left: -100px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-height: 430px;
+    min-height: 430px;
+    overflow-y: scroll;
+}

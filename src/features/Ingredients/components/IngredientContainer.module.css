@@ -1,0 +1,51 @@
+.container {
+    position: relative;
+    /* Задаем позиционирование контейнеру */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.infoButton {
+    scale: 1.2;
+    position: absolute;
+    right: 8px;
+    top: 50px;
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.addButton {
+    scale: 0.9;
+    right: 5.5px;
+    top: 85px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-size: large;
+    text-align: center;
+    border: 0px;
+    background-color: white;
+}
+
+.lessButton {
+    background-color: white;
+    scale: 0.9;
+    right: 5.5px;
+    top: 123px;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    border-radius: 25px;
+    font-size: large;
+    text-align: center;
+    border: 0px;
+}

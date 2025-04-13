@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 100%;
+    margin-top: 106px;
+    min-height: 20px;
+    max-height: 450px;
+}
+
+.list {
+    overflow-y: scroll;
+    max-height: 400px; /* Adjust as needed */
+}
+
+
+.ingredient {
+    display: flex;
+}
+
+.topSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    width: 90%;
+    padding: 20px;
+}
