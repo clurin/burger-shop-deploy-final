@@ -1,9 +1,11 @@
+import { useNavigate } from "react-router-dom"
 import { useAppDispatch } from "../app/index"
 import { logOutToken } from "../features/User/userSlice"
 
 type Props = {}
 
 const ProfilePage = (props: Props) => {
+  const navigate = useNavigate()
   const dispatch = useAppDispatch()
 
   const logOut = () => {
@@ -13,8 +15,9 @@ const ProfilePage = (props: Props) => {
   }
 
   return <>
-    <p className="text text_type_main-small" style={{ padding: '30px' }} >
-      <a href='http://localhost:3000/orderlist'>ПРОСМОТРЕТЬ ЗАКАЗЫ</a>
+    <p className="text text_type_main-small" style={{ padding: '30px' }}
+      onClick={() => navigate('/orderlist')}>
+      ПРОСМОТРЕТЬ ЗАКАЗЫ
     </p>
     <p className="text text_type_main-small" style={{ padding: '30px' }}
       onClick={logOut}>
