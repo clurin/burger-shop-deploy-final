@@ -16,7 +16,6 @@ const Table: FC<Props> = () => {
 
     useEffect(() => {
         if (data) {
-            //! ЧЕРЕЗ REDUX
             dispatch(getIngredientsFromServer(data))
         }
     }, [data, dispatch])

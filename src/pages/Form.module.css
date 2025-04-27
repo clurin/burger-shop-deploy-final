@@ -33,3 +33,18 @@
     transition: 500ms;
     font-size: 1rem;
 }
+
+@media (max-width: 400px) {
+    .container{
+        margin-top: 2rem;
+        width: 80%;
+    }
+
+    .container input{
+        font-size: 24px;
+        width: 90%;
+    }
+    .container button {
+        width: 70%;
+    }
+}

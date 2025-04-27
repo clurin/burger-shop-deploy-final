@@ -11,6 +11,7 @@ const ProfilePage = (props: Props) => {
   const logOut = () => {
     dispatch(logOutToken(null))
     alert("Вы вышли из профиля")
+    window.location.reload()
     navigate('/login')
   }
 

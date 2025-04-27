@@ -1,19 +1,37 @@
 .container {
-    margin: 50px;
+    margin: 3rem;
     width: 100%;
 }
 
 .tab {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .ingredients {
-    width: 100%;
-    margin-left: -100px;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    width: 80%;
     max-height: 430px;
-    min-height: 430px;
-    overflow-y: scroll;
+    overflow-y: auto;
+    justify-content: space-around;
+    padding-top: 2rem;
+}
+
+@media (max-width: 400px) {
+    .container {
+        transform: scale(0.9);
+        padding-top: 2rem;
+        margin: 0;
+    }
+
+    .tab {
+        flex-direction: column;
+    }
+
+    .ingredients {
+        overflow-x: hidden;
+        width: 100%;
+        max-height: 350px;
+    }
 }

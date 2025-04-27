@@ -4,6 +4,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 400px;
+    max-width: 90%;
     border-radius: 12px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     padding: 20px;
@@ -38,4 +39,12 @@ button {
 
 button:hover {
     color: #000;
+}
+
+@media (max-width: 400px) {
+    .container {
+        width: 90%;
+        transform: translate(-50%, -50%) scale(0.9);
+        padding: 15px;
+    }
 }

@@ -41,11 +41,6 @@ const Burger = (props: Props) => {
         <div className={style.container}>
             <div className={style.topSection}>
                 <p className="text text_type_main-medium">Цена: {totalCost}</p>
-                <div className={style.orderButton} onClick={handleOrder}>
-                    <Button type='primary' size='medium' htmlType={'button'}>
-                        {accessToken && (accessToken !== 'empty') ? 'Сделать заказ' : 'Войти в профиль'}
-                    </Button>
-                </div>
             </div>
             <div className={style.list}>
                 {burger.map((ingredient) => (
@@ -56,7 +51,11 @@ const Burger = (props: Props) => {
                     </div>
                 ))}
             </div>
-
+            <div className={style.orderButton} onClick={handleOrder}>
+                <Button type='primary' size='medium' htmlType={'button'}>
+                    {accessToken && (accessToken !== 'empty') ? 'Сделать заказ' : 'Войти в профиль'}
+                </Button>
+            </div>
         </div>
     )
 }
