@@ -102,7 +102,7 @@ const Form: FC<Props> = ({ isForLogInPage }) => {
                     onPointerEnterCapture={undefined}
                     onPointerLeaveCapture={undefined}
                 />
-                <Button htmlType="button" type="primary" size="medium">
+                <Button htmlType="submit" type="primary" size="medium">
                     {isForLogInPage ?
                         <p className="text text_type_main-small">Вход</p>
                         : <p className="text text_type_main-small">Регистрация</p>}

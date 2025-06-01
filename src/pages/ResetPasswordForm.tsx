@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import style from './Form.module.css'
+import style from './ResetPasswordForm.module.css'
 import { useResetPasswordRequestMutation, useResetPasswordMutation } from '../features/User/userApi'
 import { useNavigate, useParams } from 'react-router-dom';
 import { Button, Input } from '@ya.praktikum/react-developer-burger-ui-components';
@@ -33,7 +33,7 @@ const ResetPasswordRequestForm = () => {
             })
 
             if (response?.data) {
-                setMessage(`Письмо с инструкциями отправлено на ${emailValue}.`)
+                setMessage(`Письмо с инструкциями отправлено на ${emailValue}. "Данная функция находится в разработке!"`)
                 // setStep(2)
             } else {
                 setMessage('Произошла ошибка. Попробуйте снова.')
@@ -85,7 +85,7 @@ const ResetPasswordRequestForm = () => {
                             onPointerEnterCapture={undefined}
                             onPointerLeaveCapture={undefined}
                         />
-                        <Button htmlType="button" type="primary" size="medium">
+                        <Button htmlType="submit" type="primary" size="medium">
                             <p className="text text_type_main-small">
                                 Отправить запрос на сброс пароля
                             </p>
@@ -105,7 +105,7 @@ const ResetPasswordRequestForm = () => {
                             onPointerEnterCapture={undefined}
                             onPointerLeaveCapture={undefined}
                         />
-                        <Button htmlType="button" type="primary" size="medium">
+                        <Button htmlType="submit" type="primary" size="medium">
                             <p className="text text_type_main-small">Изменить пароль</p>
                         </Button>
                     </form>
