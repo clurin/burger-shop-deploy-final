@@ -3,14 +3,13 @@
     flex-direction: column;
     justify-content: start;
     width: 100%;
-    margin-top: 55px;
-    max-height: 450px;
+    margin-top: 17%;
 }
 
 .list {
     overflow-y: scroll;
-    max-height: 400px;
-    min-height: 400px;
+    min-height: 410px;
+    max-height: 410px;
 }
 
 .ingredient {
@@ -24,9 +23,10 @@
     position: sticky;
     top: 0;
     width: 90%;
-    padding-bottom: 20px;
+    padding-bottom: 0.9rem;
 }
 
 .orderButton {
     position: relative;
+    cursor: pointer;
 }

@@ -4,6 +4,7 @@ import { useAppDispatch } from '../../../app/index'
 import { useLogInMutation, useRegistrationUserMutation } from '../userApi'
 import { saveAccessToken } from '../userSlice'
 import { useNavigate } from 'react-router-dom'
+import { Button, Input } from '@ya.praktikum/react-developer-burger-ui-components'
 
 type Props = {
     isForLogInPage: boolean
@@ -63,21 +64,49 @@ const Form: FC<Props> = ({ isForLogInPage }) => {
     return (
         <div>
             <form onSubmit={handleSubmit} className={style.container}>
-                <input
-                    // type='email'
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setEmailValue(e.target.value)}
-                    value={emailValue}
-                    placeholder='email' />
-                <input
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setLoginValue(e.target.value)}
+                <div className={style.inputWrapper}>
+                    <Input
+                        type={'text'}
+                        placeholder={'Email'}
+                        onChange={(e) => setEmailValue(e.target.value)}
+                        value={emailValue}
+                        name={'email'}
+                        error={false}
+                        errorText={'Ошибка'}
+                        size={'default'}
+                        onPointerEnterCapture={undefined}
+                        onPointerLeaveCapture={undefined}
+                    />
+                </div>
+                <Input
+                    type={'text'}
+                    placeholder={'Логин'}
+                    onChange={(e) => setLoginValue(e.target.value)}
                     value={loginValue}
-                    placeholder='login' />
-                <input
-                    onChange={(e: React.ChangeEvent<HTMLInputElement>) => setPasswordValue(e.target.value)}
+                    name={'login'}
+                    error={false}
+                    errorText={'Ошибка'}
+                    size={'default'}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                />
+                <Input
+                    type={'text'}
+                    placeholder={'Пароль'}
+                    onChange={(e) => setPasswordValue(e.target.value)}
                     value={passwordValue}
-                    placeholder='password' />
-                <button>{isForLogInPage ?
-                    <p className="text text_type_main-small">Вход</p> : <p className="text text_type_main-small">Регистрация</p>}</button>
+                    name={'password'}
+                    error={false}
+                    errorText={'Ошибка'}
+                    size={'default'}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
+                />
+                <Button htmlType="button" type="primary" size="medium">
+                    {isForLogInPage ?
+                        <p className="text text_type_main-small">Вход</p>
+                        : <p className="text text_type_main-small">Регистрация</p>}
+                </Button>
             </form>
         </div>
     )

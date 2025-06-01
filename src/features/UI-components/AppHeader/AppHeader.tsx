@@ -15,31 +15,33 @@ const AppHeader = (props: Props) => {
             </div>
             <header className={style.container}>
                 <div className={style.orderContainer}>
-                    <div className={style.Designer}>
-                        <Link to='/designer'>
+                    <Link to='/designer'>
+                        <div className={style.Designer}>
                             <BurgerIcon type='primary' />
                             <p className="text text_type_main-default">
                                 Заказать бургер
                             </p>
-                        </Link >
-                    </div>
-                    <div className={style.OrderList}>
-                        <Link to='/orderlist'>
+                        </div>
+                    </Link >
+                    <Link to='/orderlist'>
+                        <div className={style.OrderList}>
                             <ListIcon type='primary' />
                             <p className="text text_type_main-default">
                                 Список заказов
                             </p>
-                        </Link >
-                    </div>
+                        </div>
+                    </Link >
                 </div>
-                <div className={style.Profile}>
-                    <Link to='/profile'>
+                <Link to='/profile'>
+                    <div className={style.Profile}>
+
                         <ProfileIcon type='primary' />
                         <p className="text text_type_main-default">
                             Профиль
                         </p>
-                    </Link >
-                </div>
+
+                    </div>
+                </Link >
             </header>
         </div>
     )

@@ -1,6 +1,8 @@
 .mainContainer {
     display: flex;
     flex-direction: column;
+    background-color: #1c1c21;
+    padding: 1rem 0;
 }
 
 .container {
@@ -8,8 +10,10 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem;
+    padding: 0 3rem;
     flex-direction: row;
+    position: relative;
+    align-items: center;
 }
 
 a {
@@ -24,14 +28,18 @@ a {
 }
 
 .Logo {
-    padding-top: 1rem;
-    width: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }
 
 @media (max-width: 400px) {
     .container {
-        width: 100%;
-        flex-direction: column;
+        justify-content: end;
+        flex-direction: row;
+        align-items: center;
+        gap: 3rem;
+        margin-top: 5rem;
     }
 
 }

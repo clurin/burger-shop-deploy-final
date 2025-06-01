@@ -25,6 +25,11 @@ const Table: FC<Props> = () => {
 
     return (
         <div className={style.container}>
+            <div className={style.text}>
+                <p className="text text_type_main-large" >
+                    Соберите бургер
+                </p>
+            </div>
             <div className={style.tab}>
                 <Tab value='bun' active={currentCategory === 'bun'} onClick={() => setCurrentCategory('bun')}>
                     Булка

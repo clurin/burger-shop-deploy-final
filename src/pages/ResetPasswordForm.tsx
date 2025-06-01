@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import style from './Form.module.css'
 import { useResetPasswordRequestMutation, useResetPasswordMutation } from '../features/User/userApi'
 import { useNavigate, useParams } from 'react-router-dom';
+import { Button, Input } from '@ya.praktikum/react-developer-burger-ui-components';
 
 type RouteParams = {
     reset_token: string
@@ -73,31 +74,40 @@ const ResetPasswordRequestForm = () => {
             <div className={style.container}>
                 {!reset_token && (
                     <form onSubmit={handleSubmitEmail} className={style.form}>
-                        <input
-                            type="email"
-                            value={emailValue}
+                        <Input
+                            type={'email'}
+                            placeholder={'Введите ваш email'}
                             onChange={(e) => setEmailValue(e.target.value)}
-                            placeholder="Введите ваш email"
-                            required
+                            value={emailValue}
+                            error={false}
+                            errorText={'Ошибка'}
+                            size={'default'}
+                            onPointerEnterCapture={undefined}
+                            onPointerLeaveCapture={undefined}
                         />
-                        <button type="submit">
-                            <p className="text text_type_main-small">Отправить запрос на сброс пароля</p>
-                        </button>
+                        <Button htmlType="button" type="primary" size="medium">
+                            <p className="text text_type_main-small">
+                                Отправить запрос на сброс пароля
+                            </p>
+                        </Button>
                     </form>
                 )}
-
                 {reset_token && (
                     <form onSubmit={handleChangePassword} className={style.form}>
-                        <input
-                            type="password"
-                            value={newPasswordValue}
+                        <Input
+                            type={'password'}
+                            placeholder={'Введите новый пароль'}
                             onChange={(e) => setNewPasswordValue(e.target.value)}
-                            placeholder="Введите новый пароль"
-                            required
+                            value={newPasswordValue}
+                            error={false}
+                            errorText={'Ошибка'}
+                            size={'default'}
+                            onPointerEnterCapture={undefined}
+                            onPointerLeaveCapture={undefined}
                         />
-                        <button type="submit">
+                        <Button htmlType="button" type="primary" size="medium">
                             <p className="text text_type_main-small">Изменить пароль</p>
-                        </button>
+                        </Button>
                     </form>
                 )}
             </div>
